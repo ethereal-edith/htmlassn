@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet Terminologies | HTTP</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <nav>
+        <h2>Menu</h2>
+        <a href="../index.html"> Home</a>
+        <a href="DNS.html">DNS</a>
+        <a href="HTTP.html">HTTP</a>
+        <a href="FTP.html">FTP</a>
+        <a href="TCPIP.html">TCP/IP</a>
+        <a href="intra_extranet.html">Intranet &amp; Extranet</a>
+        <a href="multitier.html">Multitier Architecture</a>
+        <a href="request_response.html">Request-Response</a>
+        <a href="ServersVSBrowsers.html">Web Servers vs Browsers</a>
+        <a href="URL.html">URL Structure</a>
+        <a href="web_generation.html">Web Generations</a>
+    </nav>
+
+    <main>
+        <div class="content-box">
+
+            <p class="subtitle">Application Layer Protocol</p>
+            <h1>HyperText Transfer Protocol (HTTP)</h1>
+
+            <p>
+                <strong>HTTP (HyperText Transfer Protocol)</strong> is the foundational communication protocol used for transmitting data over the World Wide Web. It defines the rules for how messages are formatted and exchanged between web clients (browsers) and web servers. HTTP was originally designed by Tim Berners-Lee in 1989–1991.
+            </p>
+            <p>
+                HTTP is a <strong>stateless</strong>, <strong>application-layer</strong> protocol that operates on top of TCP/IP. Being stateless means each request is independent — the server does not retain any information about previous requests unless additional mechanisms (like cookies or sessions) are used.
+            </p>
+
+            <img
+                class="term-image"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/HTTP_logo.svg/600px-HTTP_logo.svg.png"
+                alt="HTTP Protocol Logo"
+            >
+            <p class="image-caption">The HTTP protocol logo. HTTP operates at the application layer of the TCP/IP model.</p>
+
+            <h2>HTTP vs HTTPS</h2>
+            <p>
+                <strong>HTTPS (HTTP Secure)</strong> is the encrypted version of HTTP. It uses <strong>TLS (Transport Layer Security)</strong> to encrypt the data in transit, protecting it from eavesdropping and tampering. Websites that handle sensitive data (logins, payments) must use HTTPS. Modern browsers flag HTTP-only sites as "Not Secure."
+            </p>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>HTTP Port</h4>
+                    <p>Port 80 (default for unencrypted HTTP traffic)</p>
+                </div>
+                <div class="info-card">
+                    <h4>HTTPS Port</h4>
+                    <p>Port 443 (encrypted with TLS/SSL)</p>
+                </div>
+                <div class="info-card">
+                    <h4>Current Version</h4>
+                    <p>HTTP/3 (uses QUIC transport protocol)</p>
+                </div>
+                <div class="info-card">
+                    <h4>Designed By</h4>
+                    <p>Tim Berners-Lee (1989–1991)</p>
+                </div>
+            </div>
+
+            <h2>HTTP Methods</h2>
+            <p>HTTP defines a set of <strong>request methods</strong> (also called verbs) that indicate the desired action to be performed on a resource:</p>
+
+            <div class="key-points">
+                <h3>Common HTTP Methods</h3>
+                <ul>
+                    <li><strong>GET</strong> — Retrieves data from the server (e.g., loading a web page). No side effects.</li>
+                    <li><strong>POST</strong> — Sends data to the server to create a new resource (e.g., submitting a form).</li>
+                    <li><strong>PUT</strong> — Replaces an existing resource entirely with new data.</li>
+                    <li><strong>PATCH</strong> — Partially updates an existing resource.</li>
+                    <li><strong>DELETE</strong> — Removes the specified resource from the server.</li>
+                    <li><strong>HEAD</strong> — Same as GET but returns only the response headers, not the body.</li>
+                    <li><strong>OPTIONS</strong> — Describes the communication options available for the target resource.</li>
+                </ul>
+            </div>
+
+            <h2>HTTP Status Codes</h2>
+            <p>Every HTTP response includes a <strong>status code</strong> indicating the result of the request:</p>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>1xx — Informational</h4>
+                    <p>Request received, processing continues (e.g., 100 Continue).</p>
+                </div>
+                <div class="info-card">
+                    <h4>2xx — Success</h4>
+                    <p>Request successfully processed (e.g., 200 OK, 201 Created).</p>
+                </div>
+                <div class="info-card">
+                    <h4>3xx — Redirection</h4>
+                    <p>Further action needed (e.g., 301 Moved Permanently, 304 Not Modified).</p>
+                </div>
+                <div class="info-card">
+                    <h4>4xx — Client Error</h4>
+                    <p>Bad request from client (e.g., 404 Not Found, 403 Forbidden).</p>
+                </div>
+                <div class="info-card">
+                    <h4>5xx — Server Error</h4>
+                    <p>Server failed to fulfil a valid request (e.g., 500 Internal Server Error).</p>
+                </div>
+                <div class="info-card">
+                    <h4>Evolution</h4>
+                    <p>HTTP/1.1 → HTTP/2 (multiplexing) → HTTP/3 (QUIC protocol).</p>
+                </div>
+            </div>
+
+            <div class="footer">Admission Number: 220965</div>
+        </div>
+    </main>
+
+</body>
+</html>
