@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet Terminologies | FTP</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <nav>
+        <h2>Menu</h2>
+        <a href="../index.html">Home</a>
+        <a href="DNS.html">DNS</a>
+        <a href="HTTP.html">HTTP</a>
+        <a href="FTP.html">FTP</a>
+        <a href="TCPIP.html">TCP/IP</a>
+        <a href="intra_extranet.html">Intranet &amp; Extranet</a>
+        <a href="multitier.html">Multitier Architecture</a>
+        <a href="request_response.html">Request-Response</a>
+        <a href="ServersVSBrowsers.html">Web Servers vs Browsers</a>
+        <a href="URL.html">URL Structure</a>
+        <a href="web_generation.html">Web Generations</a>
+    </nav>
+
+    <main>
+        <div class="content-box">
+
+            <p class="subtitle">Application Layer Protocol</p>
+            <h1>File Transfer Protocol (FTP)</h1>
+
+            <p>
+                <strong>FTP (File Transfer Protocol)</strong> is a standard network protocol used to transfer files between a client and a server over a TCP/IP network, such as the Internet. It was one of the earliest Internet protocols, originally specified in 1971 by Abhay Bhushan, and was later updated in RFC 959 (1985).
+            </p>
+            <p>
+                FTP operates on a <strong>client-server model</strong>. The client initiates a connection to the FTP server to upload or download files. FTP uses two separate connections: a <strong>control connection</strong> (for commands) and a <strong>data connection</strong> (for file transfers).
+            </p>
+
+            <img
+                class="term-image"
+                src="images/filezilla_ftp_client.png"
+                alt="FileZilla FTP client screenshot"
+            >
+            <p class="image-caption">FileZilla — one of the most popular open-source FTP client applications used to transfer files between local and remote servers.</p>
+
+            <h2>How FTP Works</h2>
+            <p>
+                FTP uses a <strong>two-channel architecture</strong>:
+            </p>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>Control Connection</h4>
+                    <p>Established on <strong>Port 21</strong>. Used to send commands and receive responses between client and server throughout the session.</p>
+                </div>
+                <div class="info-card">
+                    <h4>Data Connection</h4>
+                    <p>A separate connection opened for each file transfer or directory listing. Uses <strong>Port 20</strong> (active mode) or a negotiated port (passive mode).</p>
+                </div>
+                <div class="info-card">
+                    <h4>Active Mode</h4>
+                    <p>The server initiates the data connection back to the client. Can be blocked by firewalls on the client side.</p>
+                </div>
+                <div class="info-card">
+                    <h4>Passive Mode (PASV)</h4>
+                    <p>The client initiates both connections. More firewall-friendly and widely used today.</p>
+                </div>
+            </div>
+
+            <h2>FTP Variants</h2>
+            <div class="key-points">
+                <h3>Types of FTP</h3>
+                <ul>
+                    <li><strong>FTP (Plain)</strong> — Transfers data in plaintext; no encryption. Credentials can be intercepted.</li>
+                    <li><strong>FTPS (FTP Secure)</strong> — Adds TLS/SSL encryption to FTP. Also called FTP-SSL.</li>
+                    <li><strong>SFTP (SSH File Transfer Protocol)</strong> — Not traditional FTP; runs over SSH (Secure Shell) for fully encrypted transfers. Preferred in modern deployments.</li>
+                    <li><strong>FTPES</strong> — FTP with Explicit TLS; starts as plain FTP then upgrades to encrypted.</li>
+                    <li><strong>Anonymous FTP</strong> — Allows users to connect without a username/password, often used for public file distribution.</li>
+                </ul>
+            </div>
+
+            <h2>Common FTP Commands</h2>
+            <p>FTP clients communicate with servers using text-based commands:</p>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>USER / PASS</h4>
+                    <p>Authenticate with a username and password.</p>
+                </div>
+                <div class="info-card">
+                    <h4>LIST</h4>
+                    <p>List files and directories on the server.</p>
+                </div>
+                <div class="info-card">
+                    <h4>RETR</h4>
+                    <p>Download (retrieve) a file from the server.</p>
+                </div>
+                <div class="info-card">
+                    <h4>STOR</h4>
+                    <p>Upload (store) a file to the server.</p>
+                </div>
+                <div class="info-card">
+                    <h4>DELE</h4>
+                    <p>Delete a file on the server.</p>
+                </div>
+                <div class="info-card">
+                    <h4>QUIT</h4>
+                    <p>Close the FTP session and disconnect.</p>
+                </div>
+            </div>
+
+            <h2>FTP vs HTTP</h2>
+            <p>
+                While both FTP and HTTP can transfer files, they serve different purposes. FTP is optimised for <strong>bulk file transfers</strong> and directory management between systems, while HTTP is designed for delivering <strong>web content</strong> (HTML pages, images, APIs). Today, HTTP/HTTPS has largely replaced FTP for browser-based downloads, but FTP and SFTP remain widely used in server administration, software deployment, and hosting workflows.
+            </p>
+
+
+            <div class="footer">Admission Number: 220965</div>
+        </div>
+    </main>
+
+</body>
+</html>
