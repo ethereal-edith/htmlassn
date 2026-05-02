@@ -34,7 +34,58 @@
                 <tr><td>Query</td><td>Search parameters</td><td>?id=123</td></tr>
             </table>
             <p><strong>Key idea:</strong> A URL tells the browser where to find a resource and how to fetch it.</p>
-            <img src="../images/url.png" alt="URL Structure Diagram" class="center-image">  
+            <img src="../images/url.png" alt="URL Structure Diagram" class="center-image">
+
+            <h2>Anatomy of a URL</h2>
+            <p>Consider the full URL: <code>https://www.example.com:8080/products/shoes?color=red&amp;size=42#details</code></p>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>Scheme / Protocol</h4>
+                    <p><code>https://</code> — Specifies the protocol to use. Common schemes: <em>http, https, ftp, mailto, file</em>.</p>
+                </div>
+                <div class="info-card">
+                    <h4>Subdomain</h4>
+                    <p><code>www</code> — A prefix identifying a specific server within the domain. Not always present.</p>
+                </div>
+                <div class="info-card">
+                    <h4>Domain Name</h4>
+                    <p><code>example.com</code> — The human-readable name of the website, resolved by DNS to an IP address.</p>
+                </div>
+                <div class="info-card">
+                    <h4>Port</h4>
+                    <p><code>:8080</code> — Specifies the network port. Omitted when using defaults (80 for HTTP, 443 for HTTPS).</p>
+                </div>
+                <div class="info-card">
+                    <h4>Path</h4>
+                    <p><code>/products/shoes</code> — The location of the specific resource on the server, similar to a file path.</p>
+                </div>
+                <div class="info-card">
+                    <h4>Query String</h4>
+                    <p><code>?color=red&amp;size=42</code> — Optional parameters passed to the server. Begins with <code>?</code>, parameters separated by <code>&amp;</code>.</p>
+                </div>
+                <div class="info-card">
+                    <h4>Fragment / Anchor</h4>
+                    <p><code>#details</code> — Refers to a specific section within the page. Processed entirely by the browser, not the server.</p>
+                </div>
+                <div class="info-card">
+                    <h4>Top-Level Domain (TLD)</h4>
+                    <p><code>.com</code> — The suffix of the domain. Examples: .com, .org, .ke, .edu, .gov.</p>
+                </div>
+            </div>
+
+            <h2>URL Best Practices</h2>
+            <div class="key-points">
+                <h3>Guidelines</h3>
+                <ul>
+                    <li>Use lowercase letters in URLs — they are case-sensitive on most servers.</li>
+                    <li>Use hyphens (<code>-</code>) to separate words in paths, not underscores or spaces.</li>
+                    <li>Keep URLs short, readable, and descriptive for better SEO and usability.</li>
+                    <li>Special characters must be <strong>percent-encoded</strong> — a space becomes <code>%20</code>, <code>&amp;</code> becomes <code>%26</code>.</li>
+                    <li>Always use HTTPS (not HTTP) for secure communication.</li>
+                    <li>Avoid using query strings for content that should be indexed by search engines.</li>
+                </ul>
+            </div>
+
             <div class="footer">Admission Number: 220965</div>
         </div>
     </main>

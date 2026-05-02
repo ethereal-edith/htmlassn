@@ -32,15 +32,9 @@
             </table>
             <p><strong>Key idea:</strong> FTP moves files from one computer to another.</p>
             <img src="../images/ftp.png" alt="FTP Diagram" class="center-image">
-            <div class="footer">Admission Number: 220965</div>
-        </div>
-    </main>
 
-</body>
-</html>
-            <p>
-                FTP uses a <strong>two-channel architecture</strong>:
-            </p>
+            <h2>How FTP Works</h2>
+            <p>FTP uses a <strong>two-channel architecture</strong> — one connection for commands, another for actual file data:</p>
             <div class="info-grid">
                 <div class="info-card">
                     <h4>Control Connection</h4>
@@ -66,9 +60,9 @@
                 <ul>
                     <li><strong>FTP (Plain)</strong> — Transfers data in plaintext; no encryption. Credentials can be intercepted.</li>
                     <li><strong>FTPS (FTP Secure)</strong> — Adds TLS/SSL encryption to FTP. Also called FTP-SSL.</li>
-                    <li><strong>SFTP (SSH File Transfer Protocol)</strong> — Not traditional FTP; runs over SSH (Secure Shell) for fully encrypted transfers. Preferred in modern deployments.</li>
+                    <li><strong>SFTP (SSH File Transfer Protocol)</strong> — Runs over SSH for fully encrypted transfers. Preferred in modern deployments.</li>
                     <li><strong>FTPES</strong> — FTP with Explicit TLS; starts as plain FTP then upgrades to encrypted.</li>
-                    <li><strong>Anonymous FTP</strong> — Allows users to connect without a username/password, often used for public file distribution.</li>
+                    <li><strong>Anonymous FTP</strong> — Allows users to connect without credentials, used for public file distribution.</li>
                 </ul>
             </div>
 
@@ -105,7 +99,6 @@
             <p>
                 While both FTP and HTTP can transfer files, they serve different purposes. FTP is optimised for <strong>bulk file transfers</strong> and directory management between systems, while HTTP is designed for delivering <strong>web content</strong> (HTML pages, images, APIs). Today, HTTP/HTTPS has largely replaced FTP for browser-based downloads, but FTP and SFTP remain widely used in server administration, software deployment, and hosting workflows.
             </p>
-
 
             <div class="footer">Admission Number: 220965</div>
         </div>

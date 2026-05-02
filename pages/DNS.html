@@ -30,8 +30,56 @@
                 <tr><th>Role</th><th>Example</th><th>Use</th></tr>
                 <tr><td>Name resolution</td><td>example.com → 93.184.216.34</td><td>Connects names to IP addresses</td></tr>
             </table>
-            <p><strong>Key idea:</strong> DNS helps you find websites using names instead of numbers.</p>
+            <p><strong>Key idea:</strong> DNS is the Internet's phonebook — it helps you find websites using names instead of numbers.</p>
             <img src="../images/dns.jpg" alt="DNS Diagram" class="center-image">
+
+            <h2>Why DNS Exists</h2>
+            <p>
+                Every device on the Internet is identified by an IP address — a numerical label such as <code>142.250.200.46</code>. Because humans find it difficult to remember strings of numbers, DNS was introduced to map easy-to-remember <strong>domain names</strong> (like <em>google.com</em>) to their corresponding IP addresses. DNS was designed by Paul Mockapetris and first described in 1983 in RFC 882 and RFC 883.
+            </p>
+
+            <h2>How DNS Resolution Works</h2>
+            <p>When you type a URL such as <em>www.example.com</em> into your browser, the following steps occur:</p>
+            <ol style="padding-left:1.5rem; line-height:2; font-size:0.95rem;">
+                <li>Your browser checks its local <strong>DNS cache</strong>. If the IP is cached, no further lookup is needed.</li>
+                <li>If not found, the query goes to your <strong>Recursive Resolver</strong> (usually provided by your ISP or a service like Google's 8.8.8.8).</li>
+                <li>The resolver contacts a <strong>Root Name Server</strong>, which directs it to the correct <strong>Top-Level Domain (TLD)</strong> server (e.g., <em>.com</em>).</li>
+                <li>The TLD server points to the <strong>Authoritative Name Server</strong> for the specific domain.</li>
+                <li>The authoritative server returns the IP address, which the resolver caches and returns to your browser.</li>
+            </ol>
+
+            <h2>DNS Hierarchy</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>Root Level</h4>
+                    <p>The top of the DNS hierarchy. There are 13 logical root name server addresses managed by ICANN.</p>
+                </div>
+                <div class="info-card">
+                    <h4>Top-Level Domain (TLD)</h4>
+                    <p>Extensions such as .com, .org, .net, .ke. Each is managed by a designated registry.</p>
+                </div>
+                <div class="info-card">
+                    <h4>Second-Level Domain</h4>
+                    <p>The name registered by an individual or organisation, e.g., <em>google</em> in google.com.</p>
+                </div>
+                <div class="info-card">
+                    <h4>Subdomain</h4>
+                    <p>A prefix added before the domain, e.g., <em>mail</em>.google.com or <em>docs</em>.google.com.</p>
+                </div>
+            </div>
+
+            <h2>Common DNS Record Types</h2>
+            <div class="key-points">
+                <h3>DNS Records</h3>
+                <ul>
+                    <li><strong>A Record</strong> — maps a domain name to an IPv4 address</li>
+                    <li><strong>AAAA Record</strong> — maps a domain name to an IPv6 address</li>
+                    <li><strong>CNAME Record</strong> — creates an alias from one domain to another</li>
+                    <li><strong>MX Record</strong> — specifies the mail server responsible for accepting emails for a domain</li>
+                    <li><strong>TXT Record</strong> — stores text information, often used for domain verification and security (SPF, DKIM)</li>
+                    <li><strong>TTL (Time To Live)</strong> — how long a DNS record is cached before it expires</li>
+                </ul>
+            </div>
 
             <div class="footer">Admission Number: 220965</div>
         </div>

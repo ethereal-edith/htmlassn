@@ -33,6 +33,74 @@
             </table>
             <p><strong>Key idea:</strong> HTTP carries web requests and responses between browsers and servers.</p>
             <img src="../images/http.png" alt="HTTP Diagram" class="center-image">
+
+            <h2>HTTP vs HTTPS</h2>
+            <p>
+                <strong>HTTPS (HTTP Secure)</strong> is the encrypted version of HTTP. It uses <strong>TLS (Transport Layer Security)</strong> to encrypt the data in transit, protecting it from eavesdropping and tampering. Websites that handle sensitive data (logins, payments) must use HTTPS. Modern browsers flag HTTP-only sites as "Not Secure."
+            </p>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>HTTP Port</h4>
+                    <p>Port 80 — default for unencrypted HTTP traffic.</p>
+                </div>
+                <div class="info-card">
+                    <h4>HTTPS Port</h4>
+                    <p>Port 443 — encrypted with TLS/SSL.</p>
+                </div>
+                <div class="info-card">
+                    <h4>Current Version</h4>
+                    <p>HTTP/3, which uses the QUIC transport protocol for faster performance.</p>
+                </div>
+                <div class="info-card">
+                    <h4>Designed By</h4>
+                    <p>Tim Berners-Lee (1989–1991) at CERN.</p>
+                </div>
+            </div>
+
+            <h2>HTTP Methods</h2>
+            <p>HTTP defines a set of <strong>request methods</strong> (also called verbs) that indicate the desired action to perform on a resource:</p>
+            <div class="key-points">
+                <h3>Common HTTP Methods</h3>
+                <ul>
+                    <li><strong>GET</strong> — Retrieves data from the server (e.g., loading a web page). No side effects.</li>
+                    <li><strong>POST</strong> — Sends data to the server to create a new resource (e.g., submitting a form).</li>
+                    <li><strong>PUT</strong> — Replaces an existing resource entirely with new data.</li>
+                    <li><strong>PATCH</strong> — Partially updates an existing resource.</li>
+                    <li><strong>DELETE</strong> — Removes the specified resource from the server.</li>
+                    <li><strong>HEAD</strong> — Same as GET but returns only response headers, not the body.</li>
+                    <li><strong>OPTIONS</strong> — Describes the communication options available for the target resource.</li>
+                </ul>
+            </div>
+
+            <h2>HTTP Status Codes</h2>
+            <p>Every HTTP response includes a <strong>status code</strong> indicating the result of the request:</p>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>1xx — Informational</h4>
+                    <p>Request received, processing continues (e.g., 100 Continue).</p>
+                </div>
+                <div class="info-card">
+                    <h4>2xx — Success</h4>
+                    <p>Request successfully processed (e.g., 200 OK, 201 Created).</p>
+                </div>
+                <div class="info-card">
+                    <h4>3xx — Redirection</h4>
+                    <p>Further action needed (e.g., 301 Moved Permanently, 304 Not Modified).</p>
+                </div>
+                <div class="info-card">
+                    <h4>4xx — Client Error</h4>
+                    <p>Bad request from client (e.g., 404 Not Found, 403 Forbidden, 401 Unauthorized).</p>
+                </div>
+                <div class="info-card">
+                    <h4>5xx — Server Error</h4>
+                    <p>Server failed to fulfil a valid request (e.g., 500 Internal Server Error, 503 Service Unavailable).</p>
+                </div>
+                <div class="info-card">
+                    <h4>Evolution</h4>
+                    <p>HTTP/1.1 → HTTP/2 (multiplexing, header compression) → HTTP/3 (QUIC protocol, faster handshakes).</p>
+                </div>
+            </div>
+
             <div class="footer">Admission Number: 220965</div>
         </div>
     </main>

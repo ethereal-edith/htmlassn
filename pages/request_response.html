@@ -33,8 +33,73 @@
                 <tr><td>3</td><td>Server</td><td>Sends HTTP response</td></tr>
                 <tr><td>4</td><td>Browser</td><td>Displays content</td></tr>
             </table>
-            <p><strong>Key idea:</strong> Ask and answer; that's the Web in action.</p>
+            <p><strong>Key idea:</strong> Ask and answer — that's the Web in action.</p>
             <img src="../images/reqresp.jpg" alt="Request-Response Cycle Diagram" class="center-image">
+
+            <h2>Step-by-Step: What Happens When You Visit a Website</h2>
+            <ol style="padding-left:1.5rem; line-height:2.2; font-size:0.95rem;">
+                <li>You type <code>https://www.example.com</code> into your browser and press Enter.</li>
+                <li>Your browser performs a <strong>DNS lookup</strong> to resolve the domain name to an IP address.</li>
+                <li>The browser establishes a <strong>TCP connection</strong> to the server (via the Three-Way Handshake).</li>
+                <li>If using HTTPS, a <strong>TLS handshake</strong> occurs to set up an encrypted channel.</li>
+                <li>The browser sends an <strong>HTTP Request</strong> to the server.</li>
+                <li>The server processes the request and sends back an <strong>HTTP Response</strong>.</li>
+                <li>The browser receives the response and <strong>renders</strong> the HTML, CSS, and JavaScript.</li>
+                <li>Additional requests are made for embedded resources (images, fonts, scripts).</li>
+            </ol>
+
+            <h2>Structure of an HTTP Request</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>Request Line</h4>
+                    <p>Method + URL + HTTP version. Example: <code>GET /index.html HTTP/1.1</code></p>
+                </div>
+                <div class="info-card">
+                    <h4>Request Headers</h4>
+                    <p>Metadata about the request: Host, Accept, Content-Type, User-Agent, Authorization, Cookie.</p>
+                </div>
+                <div class="info-card">
+                    <h4>Request Body</h4>
+                    <p>Optional. Contains data sent to the server — present in POST/PUT/PATCH requests (e.g., form data, JSON).</p>
+                </div>
+                <div class="info-card">
+                    <h4>Example</h4>
+                    <p><code>Host: www.example.com<br>User-Agent: Mozilla/5.0<br>Accept: text/html</code></p>
+                </div>
+            </div>
+
+            <h2>Structure of an HTTP Response</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>Status Line</h4>
+                    <p>HTTP version + status code + reason. Example: <code>HTTP/1.1 200 OK</code></p>
+                </div>
+                <div class="info-card">
+                    <h4>Response Headers</h4>
+                    <p>Metadata: Content-Type, Content-Length, Set-Cookie, Cache-Control, Server.</p>
+                </div>
+                <div class="info-card">
+                    <h4>Response Body</h4>
+                    <p>The actual content: HTML page, JSON data, image binary, file download, etc.</p>
+                </div>
+                <div class="info-card">
+                    <h4>Key Status Codes</h4>
+                    <p>200 OK, 201 Created, 301 Redirect, 404 Not Found, 500 Server Error.</p>
+                </div>
+            </div>
+
+            <h2>Key Characteristics</h2>
+            <div class="key-points">
+                <h3>Properties of HTTP Communication</h3>
+                <ul>
+                    <li><strong>Stateless</strong> — each request is independent; the server does not remember previous requests</li>
+                    <li><strong>Client-Initiated</strong> — the server never pushes data unless requested (in classic HTTP)</li>
+                    <li><strong>Synchronous (traditionally)</strong> — the client waits for the response before proceeding</li>
+                    <li><strong>WebSockets</strong> — a modern upgrade allowing full-duplex communication (server can push to client)</li>
+                    <li><strong>AJAX</strong> — allows pages to send/receive data in the background without full page reloads</li>
+                </ul>
+            </div>
+
             <div class="footer">Admission Number: 220965</div>
         </div>
     </main>
