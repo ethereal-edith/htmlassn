@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet Terminologies | Web Generations</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <nav>
+        <h2>Menu</h2>
+        <a href="../index.html">Home</a>
+        <a href="DNS.html">DNS</a>
+        <a href="HTTP.html">HTTP</a>
+        <a href="FTP.html">FTP</a>
+        <a href="TCPIP.html">TCP/IP</a>
+        <a href="intra_extranet.html">Intranet &amp; Extranet</a>
+        <a href="multitier.html">Multitier Architecture</a>
+        <a href="request_response.html">Request-Response</a>
+        <a href="ServersVSBrowsers.html">Web Servers vs Browsers</a>
+        <a href="URL.html">URL Structure</a>
+        <a href="web_generation.html">Web Generations</a>
+    </nav>
+
+    <main>
+        <div class="content-box">
+            <h1>Web Generations</h1>
+            <p>The Web has evolved through generations, each bringing new capabilities and technologies.</p>
+            <table>
+                <tr><th>Generation</th><th>Era</th><th>Focus</th></tr>
+                <tr><td>Web 1.0</td><td>1991-2004</td><td>Static pages</td></tr>
+                <tr><td>Web 2.0</td><td>2004-present</td><td>Interactive, user-generated</td></tr>
+                <tr><td>Web 3.0</td><td>Future</td><td>Semantic, decentralised</td></tr>
+            </table>
+            <p><strong>Key idea:</strong> Each generation added new capabilities to how we use the Web.</p>
+
+            <div class="footer">Admission Number: 220965</div>
+        </div>
+    </main>
+
+</body>
+</html>
+
+            <img
+                class="term-image"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Client-server-model.svg/700px-Client-server-model.svg.png"
+                alt="Client-Server model diagram showing browser and server communication"
+            >
+            <p class="image-caption">The client-server model: a browser (client) sends HTTP requests to a web server, which processes and returns the appropriate responses.</p>
+
+            <h2>Web Browsers</h2>
+            <p>
+                A <strong>web browser</strong> is a software application that allows users to access, retrieve, and view resources on the World Wide Web. It acts as the <strong>client</strong> in the client-server model. Browsers send HTTP/HTTPS requests to web servers and render (display) the HTML, CSS, and JavaScript they receive back.
+            </p>
+
+            <div class="key-points">
+                <h3>What a Browser Does</h3>
+                <ul>
+                    <li>Resolves domain names via DNS lookups</li>
+                    <li>Sends HTTP/HTTPS requests to web servers</li>
+                    <li>Receives and parses HTML documents (the DOM)</li>
+                    <li>Applies CSS stylesheets to render visual layouts</li>
+                    <li>Executes JavaScript for dynamic behaviour</li>
+                    <li>Manages cookies, caches, and local storage</li>
+                    <li>Handles security (TLS, same-origin policy, CORS)</li>
+                </ul>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>Google Chrome</h4>
+                    <p>Most popular browser (65%+ market share). Uses the V8 JavaScript engine and Blink rendering engine.</p>
+                </div>
+                <div class="info-card">
+                    <h4>Mozilla Firefox</h4>
+                    <p>Open-source browser by Mozilla. Uses the SpiderMonkey JS engine and Gecko rendering engine.</p>
+                </div>
+                <div class="info-card">
+                    <h4>Apple Safari</h4>
+                    <p>Default on Apple devices. Uses the WebKit engine. Optimised for macOS and iOS performance.</p>
+                </div>
+                <div class="info-card">
+                    <h4>Microsoft Edge</h4>
+                    <p>Microsoft's browser, rebuilt on Chromium (2020). Replaced Internet Explorer.</p>
+                </div>
+            </div>
+
+            <h2>Web Servers</h2>
+            <p>
+                A <strong>web server</strong> is both the hardware (physical/virtual machine) and software that stores, processes, and delivers web content to clients over the Internet. When a browser sends a request, the web server handles it and returns the appropriate resource — an HTML page, an image, JSON data, or a file.
+            </p>
+
+            <div class="key-points">
+                <h3>What a Web Server Does</h3>
+                <ul>
+                    <li>Listens for incoming HTTP/HTTPS requests (on ports 80 and 443)</li>
+                    <li>Serves <strong>static content</strong> directly: HTML, CSS, images, PDFs</li>
+                    <li>Passes requests to application servers for <strong>dynamic content</strong> (e.g., database queries)</li>
+                    <li>Handles load balancing, caching, and SSL termination</li>
+                    <li>Logs requests, errors, and access events</li>
+                    <li>Enforces access controls and redirects</li>
+                </ul>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>Apache HTTP Server</h4>
+                    <p>The most historically popular open-source web server. Highly configurable via .htaccess files.</p>
+                </div>
+                <div class="info-card">
+                    <h4>Nginx</h4>
+                    <p>High-performance, lightweight server known for handling thousands of concurrent connections. Also used as a reverse proxy.</p>
+                </div>
+                <div class="info-card">
+                    <h4>Microsoft IIS</h4>
+                    <p>Internet Information Services — Microsoft's web server for Windows environments.</p>
+                </div>
+                <div class="info-card">
+                    <h4>Caddy</h4>
+                    <p>Modern server with automatic HTTPS via Let's Encrypt. Growing in popularity for simplicity.</p>
+                </div>
+            </div>
+
+            <h2>Key Differences at a Glance</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>Role</h4>
+                    <p><strong>Browser</strong>: Client — requests resources.<br><strong>Server</strong>: Host — stores and serves resources.</p>
+                </div>
+                <div class="info-card">
+                    <h4>Direction</h4>
+                    <p><strong>Browser</strong> initiates requests.<br><strong>Server</strong> responds to requests.</p>
+                </div>
+                <div class="info-card">
+                    <h4>Location</h4>
+                    <p><strong>Browser</strong>: Runs on the user's device (client-side).<br><strong>Server</strong>: Runs in a data centre (server-side).</p>
+                </div>
+                <div class="info-card">
+                    <h4>Output</h4>
+                    <p><strong>Browser</strong>: Renders visual pages for the user.<br><strong>Server</strong>: Returns raw data (HTML, JSON, files).</p>
+                </div>
+            </div>
+
+            <div class="related-terms">
+                <h3>Related Terms</h3>
+                <div class="tag-links">
+                    <a href="HTTP.html">HTTP</a>
+                    <a href="request_response.html">Request-Response</a>
+                    <a href="multitier.html">Multitier Architecture</a>
+                    <a href="DNS.html">DNS</a>
+                    <a href="../index.html">← Home</a>
+                </div>
+            </div>
+
+            <div class="footer">Admission Number: 220965</div>
+        </div>
+    </main>
+
+</body>
+</html>
