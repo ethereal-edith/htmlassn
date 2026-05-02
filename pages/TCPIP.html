@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet Terminologies | TCP/IP</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <nav>
+        <h2>Menu</h2>
+        <a href="../index.html">Home</a>
+        <a href="DNS.html">DNS</a>
+        <a href="HTTP.html">HTTP</a>
+        <a href="FTP.html">FTP</a>
+        <a href="TCPIP.html">TCP/IP</a>
+        <a href="intra_extranet.html">Intranet &amp; Extranet</a>
+        <a href="multitier.html">Multitier Architecture</a>
+        <a href="request_response.html">Request-Response</a>
+        <a href="ServersVSBrowsers.html">Web Servers vs Browsers</a>
+        <a href="URL.html">URL Structure</a>
+        <a href="web_generation.html">Web Generations</a>
+    </nav>
+
+    <main>
+        <div class="content-box">
+            <h1>Transmission Control Protocol / Internet Protocol (TCP/IP)</h1>
+            <p>TCP/IP is the core protocol suite that lets devices communicate across the Internet.</p>
+            <table>
+                <tr><th>Layer</th><th>Role</th><th>Example</th></tr>
+                <tr><td>TCP</td><td>Reliable delivery</td><td>Web page loading</td></tr>
+                <tr><td>IP</td><td>Routing packets</td><td>Finding the destination</td></tr>
+            </table>
+            <p><strong>Key idea:</strong> IP finds the route, TCP helps delivery stay reliable.</p>
+
+            <div class="footer">Admission Number: 220965</div>
+        </div>
+    </main>
+
+</body>
+</html>
+
+            <h2>The TCP/IP Model (4 Layers)</h2>
+            <p>The TCP/IP model organises network communication into four conceptual layers, each responsible for specific functions:</p>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>Layer 4 — Application</h4>
+                    <p>Where user-facing protocols operate: HTTP, HTTPS, FTP, DNS, SMTP, SSH. This is where browsers and applications interact with the network.</p>
+                </div>
+                <div class="info-card">
+                    <h4>Layer 3 — Transport</h4>
+                    <p>Manages end-to-end communication. <strong>TCP</strong> provides reliable, ordered delivery. <strong>UDP</strong> provides fast, connectionless delivery.</p>
+                </div>
+                <div class="info-card">
+                    <h4>Layer 2 — Internet</h4>
+                    <p>Handles logical addressing and routing using <strong>IP addresses</strong>. The IP protocol operates here, routing packets across networks.</p>
+                </div>
+                <div class="info-card">
+                    <h4>Layer 1 — Network Access</h4>
+                    <p>Covers the physical transmission of data: Ethernet, Wi-Fi, MAC addresses, and the physical cables or wireless signals.</p>
+                </div>
+            </div>
+
+            <h2>TCP: How Reliable Delivery Works</h2>
+            <p>
+                TCP guarantees reliable delivery through a process called the <strong>Three-Way Handshake</strong> before any data is transmitted:
+            </p>
+            <div class="key-points">
+                <h3>The Three-Way Handshake</h3>
+                <ul>
+                    <li><strong>SYN</strong> — Client sends a synchronise packet to the server: "I want to connect."</li>
+                    <li><strong>SYN-ACK</strong> — Server responds with synchronise-acknowledge: "Connection accepted."</li>
+                    <li><strong>ACK</strong> — Client sends an acknowledgement: "Connection established." Data transfer begins.</li>
+                </ul>
+            </div>
+            <p>TCP also handles <strong>error detection</strong>, <strong>packet reordering</strong>, and <strong>flow control</strong>, ensuring data arrives complete and in the correct sequence.</p>
+
+            <h2>IP Addressing</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>IPv4</h4>
+                    <p>32-bit address written as four octets (e.g., 192.168.1.1). Supports ~4.3 billion unique addresses — now exhausted.</p>
+                </div>
+                <div class="info-card">
+                    <h4>IPv6</h4>
+                    <p>128-bit address written in hexadecimal (e.g., 2001:0db8::1). Supports virtually unlimited addresses.</p>
+                </div>
+                <div class="info-card">
+                    <h4>TCP vs UDP</h4>
+                    <p>TCP: reliable, ordered, slower. UDP: faster, connectionless, no delivery guarantee — used in video streaming, gaming, VoIP.</p>
+                </div>
+                <div class="info-card">
+                    <h4>Packets</h4>
+                    <p>Data is broken into small chunks called packets. Each travels independently across the network and is reassembled at the destination.</p>
+                </div>
+            </div>
+
+            <div class="related-terms">
+                <h3>Related Terms</h3>
+                <div class="tag-links">
+                    <a href="HTTP.html">HTTP</a>
+                    <a href="DNS.html">DNS</a>
+                    <a href="FTP.html">FTP</a>
+                    <a href="request_response.html">Request-Response</a>
+                    <a href="../index.html">← Home</a>
+                </div>
+            </div>
+
+            <div class="footer">Admission Number: 220965</div>
+        </div>
+    </main>
+
+</body>
+</html>
