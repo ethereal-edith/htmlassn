@@ -1,1 +1,96 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet Terminologies | Multitier Architecture</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <nav>
+        <h2>Menu</h2>
+        <a href="../index.html">Home</a>
+        <a href="DNS.html">DNS</a>
+        <a href="HTTP.html">HTTP</a>
+        <a href="FTP.html">FTP</a>
+        <a href="TCPIP.html">TCP/IP</a>
+        <a href="intra_extranet.html">Intranet &amp; Extranet</a>
+        <a href="multitier.html">Multitier Architecture</a>
+        <a href="request_response.html">Request-Response</a>
+        <a href="ServersVSBrowsers.html">Web Servers vs Browsers</a>
+        <a href="URL.html">URL Structure</a>
+        <a href="web_generation.html">Web Generations</a>
+    </nav>
+
+    <main>
+        <div class="content-box">
+            <h1>Multitier Architecture</h1>
+            <p>Multitier architecture divides an application into layers so each part has a clear job.</p>
+            <table>
+                <tr><th>Tier</th><th>Role</th><th>Example</th></tr>
+                <tr><td>Presentation</td><td>User interface</td><td>Browser</td></tr>
+                <tr><td>Logic</td><td>Business rules</td><td>Application server</td></tr>
+                <tr><td>Data</td><td>Stores information</td><td>Database</td></tr>
+            </table>
+            <p><strong>Key idea:</strong> separating layers makes systems easier to build and manage.</p>
+
+            <div class="footer">Admission Number: 220965</div>
+        </div>
+    </main>
+
+</body>
+</html>
+            <div class="key-points">
+                <h3>Benefits</h3>
+                <ul>
+                    <li><strong>Separation of Concerns</strong> — each tier has a specific role; changes in one tier don't break others</li>
+                    <li><strong>Scalability</strong> — individual tiers can be scaled independently based on demand</li>
+                    <li><strong>Security</strong> — the database tier is never directly exposed to the user; the app tier acts as a gatekeeper</li>
+                    <li><strong>Maintainability</strong> — different teams can work on different tiers simultaneously</li>
+                    <li><strong>Reusability</strong> — the same application/data tier can serve multiple presentation interfaces (web, mobile)</li>
+                    <li><strong>Testability</strong> — each tier can be tested in isolation with unit and integration tests</li>
+                </ul>
+            </div>
+
+            <h2>Beyond Three Tiers</h2>
+            <p>
+                Modern applications often extend the classic 3-tier model:
+            </p>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>2-Tier (Client-Server)</h4>
+                    <p>The client communicates directly with the database. Simpler but less secure and scalable. Common in desktop applications.</p>
+                </div>
+                <div class="info-card">
+                    <h4>4-Tier</h4>
+                    <p>Adds a <strong>delivery tier</strong> (CDN, load balancer, API gateway) in front of the presentation layer.</p>
+                </div>
+                <div class="info-card">
+                    <h4>Microservices</h4>
+                    <p>A modern evolution where the application tier is split into many small, independently deployable services that communicate via APIs.</p>
+                </div>
+                <div class="info-card">
+                    <h4>Real-World Example</h4>
+                    <p>An e-commerce site: <em>React frontend</em> (Presentation) → <em>Django REST API</em> (Logic) → <em>PostgreSQL</em> (Data).</p>
+                </div>
+            </div>
+
+            <div class="related-terms">
+                <h3>Related Terms</h3>
+                <div class="tag-links">
+                    <a href="ServersVSBrowsers.html">Web Servers vs Browsers</a>
+                    <a href="request_response.html">Request-Response</a>
+                    <a href="HTTP.html">HTTP</a>
+                    <a href="intra_extranet.html">Intranet &amp; Extranet</a>
+                    <a href="../index.html">← Home</a>
+                </div>
+            </div>
+
+            <div class="footer">Admission Number: 220965</div>
+        </div>
+    </main>
+
+</body>
+</html>
